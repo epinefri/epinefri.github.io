@@ -34,44 +34,61 @@
 						<div class="inner">
 							<h1 class="major">Divvy Bike-Sharing case study</h1>
 							<span class="image fit"><img src="images/bikes.jpg" alt="" /></span>
+
+                        </p>
+                        <p>Photo by <a href="https://unsplash.com/@mariuszpierog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mariusz Pierog</a> on <a href="https://unsplash.com/s/photos/bike-chicago?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                            .</p>
+
 							<h3>1.	Introduction</h3>
-                                <p>There are two types of customers, the casual users (customers who purchase single-ride or one-day passes) and annual members (customers who purchase annual memberships). The objective of this case study is to find key differences between the two kinds of customers, that could help the marketing team design strategies aimed at converting casual users to annual members.
-                                The dataset is provided by Divvy Bikes, a Chicago bike-sharing company (license-agreement). 
+                                <p>There are two types of customers, the casual users (customers who purchase single-ride or one-day passes) and annual members (customers who purchase annual memberships).<br>The objective of this case study is to find key differences between the two kinds of customers, that could help the marketing team design strategies aimed at converting casual users to annual members.<br>
+                                The dataset is provided by Divvy Bikes, a Chicago bike-sharing company (license-agreement). <br>
                                 The case study covers a period of 12 months, from October 2021 to September 2022.</p>
                                 
                                 <h3>2.	Details about the dataset</h3>
                                 <ul>
                                     <li>“Each trip is anonymized and includes:
-                                        <li2>Trip start day and time</li2>
-                                        <li2>Trip end day and time</li2>
-                                        <li2>Trip start station</li2>
-                                        <li2>Trip end station</li2>
-                                        <li2>Rider type (Member, Single Ride, and Day Pass)” (source: Divvy bikes website)</li2></li>
+                                        <ul>
+                                            <li>Trip start day and time</li>
+                                            <li>Trip end day and time</li>
+                                            <li>Trip start station</li>
+                                            <li>Trip end station</li>
+                                            <li>Rider type (Member, Single Ride, and Day Pass)” (source: Divvy bikes website)</li>
+                                        </ul>
+                                    </li>
                                     <li>“The data has been processed to remove trips that are taken by staff as they service and inspect the system; and any trips that were below 60 seconds in length (potentially false starts or users trying to re-dock a bike to ensure it was secure).” (source: Divvy bikes website)</li>
-                                    <li>Time period: 1st oct 2021 – 30th sept 2022</li>
+                                    <li>Time period: 1st oct 2021 - 30th sept 2022</li>
                                 <li>Data organization: monthly csv files </li> 
                                <li>Importing to Power BI Desktop and combining the csv files resulted in a dataset of 5,828,235 rows </li>
                             <li>Limitations:
-                                <li2>Station information (start and end station names and IDs) missing for 895,032 out of 5,838,235 entries</li2></li>
+                                <ul>
+                                    <li>Station information (start and end station names and IDs) missing for 895,032 out of 5,838,235 entries</li>
+                                </ul>
+                            </li>
                             </ul>
                                 <h3>	A summary of the analysis </h3>
-                                <li>	Added columns:
-                                <li2>trip_duration (number of minutes)</li2>
-                            </li2>weekday</li2>
-                        </li2>avg_num_rides_per_day</li2></li>
-                               <li>Added tables:</li>
-                            </li2>weekday_order - to sort days of the week</li2>
-                        </li2>changed docked_bike to classic_bike after checking with a Divvy data center representative via email: "there are two kinds of bikes: electric and non-electric. The non-electric bikes are nowadays labelled as classic_bike and docked_bike. Hence, if you see docked_bike and classic_bike in the same dataset, know that you can categorize them together, as they are physically and functionally the same".</li2>
+                                <ul>
+                                    <li> Added columns:
+                                        <ul>
+                                            <li>trip_duration (number of minutes)</li>
+                                            <li>weekday</li>
+                                            <li>avg_num_rides_per_day</li>
+                                        </ul>
+                                    </li>
+                                    <li>Added tables:
+                                        <ul>
+                                            <li> weekday_order - to sort days of the week</li>
+                                            <li> changed docked_bike to classic_bike after checking with a Divvy data center representative via email: "there are two kinds of bikes: electric and non-electric. The non-electric bikes are nowadays labelled as classic_bike and docked_bike. Hence, if you see docked_bike and classic_bike in the same dataset, know that you can categorize them together, as they are physically and functionally the same".</li>
+                                        </ul>
+                                    </li>
+                                </ul>
 
                                 4.	Visualizations and key findings
-                                <span class="image fit"><img src="images/bikeshare_Page_1.jpg" alt="" /></span>
-                                <span class="image fit"><img src="images/bikeshare_Page_2.jpg" alt="" /></span>
-                                <span class="image fit"><img src="images/bikeshare_Page_3.jpg" alt="" /></span>
+                                <img src="images/bikeshare_Page_1.jpg" alt="" /></span>
+                                <img src="images/bikeshare_Page_2.jpg" alt="" /></span>
+                                <img src="images/bikeshare_Page_3.jpg" alt="" /></span>
                                 
                                 
-                                </p>
-							<p>Photo by <a href="https://unsplash.com/@mariuszpierog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mariusz Pierog</a> on <a href="https://unsplash.com/s/photos/bike-chicago?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                                .</p>
+
 						</div>
 					</section>
 
