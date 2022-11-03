@@ -1,0 +1,59 @@
+Divvy Bike-Sharing case study in PowerBI
+Photo by <a href="https://unsplash.com/@mariuszpierog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mariusz Pierog | Unsplash
+
+<h3>1. Introduction</h3>
+    <p> Divvy, like other bike share systems, consists of a fleet of classic and electrical bikes that are locked into a network of docking stations. The bikes can be unlocked from one station and returned to any other station in the system. The bikes are available for use 24 hours/day, 7 days/week, 365 days/year, and riders have access to all bikes and stations across the system.<br> 
+    There are two types of customers, the casual users (customers who purchase single-ride or one-day passes) and annual members (customers who purchase annual memberships).<br>
+    The objective of this case study is to find key differences between the two kinds of customers, that could help the marketing team design strategies aimed at converting casual users to annual members.<br>
+    The dataset is provided by Divvy Bikes, a Chicago bike-sharing company (license-agreement). <br>
+    The case study covers a period of 12 months, from October 2021 to September 2022.</p>
+
+<h3>2. Details about the dataset</h3>
+    <ul>
+        <li>“Each trip is anonymized and includes:
+            <ul>
+                <li>Trip start day and time</li>
+                <li>Trip end day and time</li>
+                <li>Trip start station</li>
+                <li>Trip end station</li>
+                <li>Rider type (Member, Single Ride, and Day Pass)” (source: Divvy bikes  <a href="https://ride.divvybikes.com/system-data">website</a>)</li>
+            </ul>
+        </li>
+
+        <li>“The data has been processed to remove trips that are taken by staff as they service and inspect the system; and any trips that were below 60 seconds in length (potentially false starts or users trying to re-dock a bike to ensure it was secure).” (source: Divvy bikes <a href="https://ride.divvybikes.com/system-data">website</a>)</li>
+        
+        <li>Time period: 1st oct 2021 - 30th sept 2022</li>
+        
+        <li>Data organization: monthly csv files </li> 
+        
+        <li>Importing to Power BI Desktop and combining the csv files resulted in a dataset of 5,828,235 rows </li>
+        
+        <li>Limitations:
+            <ul>
+                <li>Station information (start and end station names and IDs) missing for 895,032 out of 5,838,235 entries</li>
+            </ul>
+        </li>
+    </ul>
+
+<h3>3. A summary of the analysis </h3>
+    <ul>
+        <li> Added columns:
+            <ul>
+                <li>trip_duration (number of minutes)</li>
+                <li>weekday</li>
+                <li>avg_num_rides_per_day</li>
+            </ul>
+        </li>
+
+        <li>Added tables:
+            <ul>
+                <li> weekday_order - to sort days of the week</li>
+                <li> changed docked_bike to classic_bike after checking with a Divvy data center representative via email: "there are two kinds of bikes: electric and non-electric. The non-electric bikes are nowadays labelled as classic_bike and docked_bike. Hence, if you see docked_bike and classic_bike in the same dataset, know that you can categorize them together, as they are physically and functionally the same".</li>
+            </ul>
+        </li>
+    </ul>
+
+<h3>4. Visualizations and key findings</h3>
+<span class="image fit"><img src="images/bikeshare-1.png" alt="" /></span>
+<span class="image fit"><img src="images/bikeshare-2.png" alt="" /></span>
+<span class="image fit"><img src="images/bikeshare-3.png" alt="" /></span>
