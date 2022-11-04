@@ -2702,7 +2702,7 @@ input, select, textarea {
 				padding-top: 0;
 			}
 
-/* Poptrox */
+/* Poptrox 
 
 	@-moz-keyframes spin {
 		0% {
@@ -2958,9 +2958,9 @@ input, select, textarea {
 			.poptrox-popup:hover .closer:hover {
 				opacity: 1.0;
 			}
-
+*/
 /* Touch */
-
+/*
 	body.is-touch .image.thumb:before {
 		opacity: 0.5 !important;
 	}
@@ -2979,7 +2979,7 @@ input, select, textarea {
 	body.is-touch .poptrox-popup .closer {
 		opacity: 1.0 !important;
 	}
-
+*/
 /* XLarge */
 
 	@media screen and (max-width: 1800px) {
@@ -3183,7 +3183,7 @@ input, select, textarea {
 					padding: 2.25em 0 0 0;
 				}
 
-		/* Poptrox */
+		/* Poptrox 
 
 			.poptrox-popup {
 				border-radius: 0;
@@ -3193,7 +3193,7 @@ input, select, textarea {
 				.poptrox-popup .nav-previous:before {
 					margin-top: -1em;
 				}
-
+*/
 	}
 
 /* XSmall */
