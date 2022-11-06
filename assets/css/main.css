@@ -2603,7 +2603,7 @@ input, select, textarea {
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 35%;
+		width: 30%;
 	}
 
 		
@@ -2686,7 +2686,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		margin-left: 35%;
+		margin-left: 30%;
 		max-width: 75em;
 		padding: 8em 4em 4em 4em;
 		width: calc(100% - 35%);
