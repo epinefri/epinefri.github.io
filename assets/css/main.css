@@ -2603,7 +2603,7 @@ input, select, textarea {
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 30%;
+		width: 25%;
 	}
 
 		
@@ -2686,10 +2686,10 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		margin-left: 30%;
+		margin-left: 25%;
 		max-width: 75em;
 		padding: 8em 4em 4em 4em;
-		width: calc(100% - 35%);
+		width: calc(100% - 25%);
 	}
 
 		#main > section {
