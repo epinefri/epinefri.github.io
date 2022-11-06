@@ -44,7 +44,80 @@
 			
 			<section id="two">
 
-<div class='tableauPlaceholder' id='viz1667743588057' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AveragetravelspeedsanddurationbytrainandcarfromBucharesttoRomaniacounties&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AveragetravelspeedsanddurationbytrainandcarfromBucharesttoRomaniacounties&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AveragetravelspeedsanddurationbytrainandcarfromBucharesttoRomaniacounties&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1667743588057');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='2297px';vizElement.style.maxWidth='2397px';vizElement.style.width='100%';vizElement.style.minHeight='1238px';vizElement.style.maxHeight='1338px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='2297px';vizElement.style.maxWidth='2397px';vizElement.style.width='100%';vizElement.style.minHeight='1238px';vizElement.style.maxHeight='1338px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1477px';}                     var scriptElement = document.createElement('script');                    scriptElement.<div class='tableauPlaceholder' id='viz1667744130922' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AveragetravelspeedsanddurationbytrainandcarfromBucharesttoRomaniacounties&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AveragetravelspeedsanddurationbytrainandcarfromBucharesttoRomaniacounties&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AveragetravelspeedsanddurationbytrainandcarfromBucharesttoRomaniacounties&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1667744130922');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='3527px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='3527px';} else { vizElement.style.width='100%';vizElement.style.height='1477px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+											
+					<h3>Introduction</h3>
+					
+					<p>Comparison of trip duration between Bucharest and county seats of Romania, by train versus by car.</p>
+					
+					<h3>Data sources:</h3>
+					<ol>
+						<li><a href="https://en.wikipedia.org/wiki/Counties_of_Romania">https://en.wikipedia.org/wiki/Counties_of_Romania</a></li>
+							<ul>
+								<li>Counties and county seats</li>
+								<li>NUTS code (needed for Tableau maps)</li>
+							</ul>
+						<li><a href="https://bilete.cfrcalatori.ro/">https://bilete.cfrcalatori.ro/</a></li>
+							<ul>
+								<li>Trip duration, distance in km, transfer time</li>
+								<li>Trip data for 6<sup>th</sup> November 2022 (Sunday)</li>
+								<li>Selection criteria:</li>
+									<ul>
+										<li>Chose InterRegio (InterRegional/IR) trains when possible</li>
+										<li>Least transfers possible</li>
+										<li>Transfers times of at least 25 minutes</li>
+										<li>Shortest trip duration possible, regardless of time of day</li>
+									</ul>
+								
+							</ul>
+						<li><a href="https://maps.google.com">https://maps.google.com</a></li>
+							<ul>
+								<li>Most optimistic estimate</li>
+								<li>Trip data for 6<sup>th</sup> November 2022 (Sunday - chosen to minimize in-city traffic delays)</li>
+								<li>Starting point is city center </li>
+							</ul>
+					</ol>
+					<h3>Data manipulation:</h3>
+					<ol>
+						<li>Joined in Excel the following columns: </li>
+							<ul>
+								<li>County, County seat, NUTS code (data source 1), </li>
+								<li>Trip duration train, Distance in km train, Transfer time (data source 2)</li>
+								<li>Trip duration car, Distance in km car</li>
+							</ul>
+						<li> Calculated fields:</li>
+							<ul>
+								<li>New columns with the number of hours in a numerical format (instead of the hh:mm:ss format) for trip duration columns </li>
+								<li>New columns with average speeds (kmps) by train and car</li>
+							</ul>
+					</ol>
+					
+					<h3>Visualization:</h3>
+					
+					<h4>Average train and car travel speeds from Bucharest to county seat cities</h4>
+					<p>Note: transfer time was included in the calculation of the average speed. The values do not reflect the actual average speed of trains for routes that included transfers (1 transfer: Resita, Calarasi, Slobozia, Zalau, Alexandria, Tulcea) </p>
+					<p>The color scale for average speeds:</p>
+						<ul>
+							<li>Minimum 40 kmph (Giurgiu 44.5 kmph by train)</li>
+							<li>Maximum 115 kmph (Constanta 112 kmph by car)</li>
+							<li>Red (slower) to green (faster)</li>
+						</ul>
+
+					<h4>Average train and car travel duration from Bucharest to county seat cities</h4>
+					<p> The color scale for duration:</p>
+						<ul>
+							<li>Minimum 0.5 hours (Ploiesti 0.55 hours)</li>
+							<li>Maximum 15 hours (Satu Mare 14.27 hours)</li>
+							<li>Green (shorter) to red (longer)</li>
+					
+					</div>
+					
+	
+					
+					<div class='tableauPlaceholder' id='viz1667746110365' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AveragetravelspeedsanddurationbytrainandcarfromBucharesttoRomaniacounties&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AveragetravelspeedsanddurationbytrainandcarfromBucharesttoRomaniacounties&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AveragetravelspeedsanddurationbytrainandcarfromBucharesttoRomaniacounties&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1667746110365');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='3527px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='3527px';} else { vizElement.style.width='100%';vizElement.style.height='1477px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+
+
 
 
 		<!-- Footer -->
