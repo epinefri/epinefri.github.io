@@ -288,7 +288,7 @@ bed</li>
 <pre class="r"><code>WeightSummary &lt;- weightLogInfo %&gt;%
     group_by(Id) %&gt;%
     summarize(meanWeightKg = mean(WeightKg), meanBMI = mean(BMI))</code></pre>
-<h3>2. Merged tables, resulting in a table that summarizes data for each person.</h3>
+<h3>2. Merged tables, resulting in a table that summarizes available data for each person.</h3>
 <pre class="r"><code>Summary &lt;- ActivitySummary %&gt;%
     left_join(HeartrateSummary, by = &quot;Id&quot;) %&gt;%
     left_join(SleepSummary, by = &quot;Id&quot;) %&gt;%
